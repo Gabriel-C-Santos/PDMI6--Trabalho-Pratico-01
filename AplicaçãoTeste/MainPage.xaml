@@ -1,0 +1,43 @@
+﻿<!-- Gabriel Coutinho dos Santos e Leonardo Pinto Teixiera -->
+    
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplicaçãoTeste.MainPage"
+             BackgroundColor="Black">
+
+    <Grid Padding="20" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *">
+        <Label Grid.ColumnSpan="2" Text="Aplicação Teste"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               TextColor="White"
+               Margin="0,20,0,20" />
+
+        <Label Grid.Row="1" Text="ID:" VerticalOptions="Center" TextColor="White" HorizontalOptions="End" Margin="0,0,5,0"/>
+        <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="Black" BorderColor="White" CornerRadius="5" Padding="0">
+            <Entry x:Name="entryID" Placeholder=""
+                   BackgroundColor="Black"
+                   TextColor="White"
+                   WidthRequest="250"
+                   HeightRequest="40"
+                   HorizontalTextAlignment="Center"/>
+        </Frame>
+
+        <Label Grid.Row="2" Text="Pass:" VerticalOptions="Center" TextColor="White" HorizontalOptions="End" Margin="0,0,5,0"/>
+        <Frame Grid.Row="2" Grid.Column="1" BackgroundColor="Black" BorderColor="White" CornerRadius="5" Padding="0">
+            <Entry x:Name="entryPass" Placeholder="" IsPassword="True"
+                   BackgroundColor="Black"
+                   TextColor="White"
+                   WidthRequest="250"
+                   HeightRequest="40"
+                   HorizontalTextAlignment="Center"/>
+        </Frame>
+
+        <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Spacing="10" HorizontalOptions="Center" Margin="0,30,0,0">
+            <Button Text="OK" Clicked="OnOkButtonClicked" BackgroundColor="Gray" TextColor="Maroon" WidthRequest="150"/>
+            <Button Text="Limpar" Clicked="OnClearButtonClicked" BackgroundColor="Gray" TextColor="Maroon" WidthRequest="150"/>
+            <Button Text="Créditos" Clicked="OnCreditsButtonClicked" BackgroundColor="Gray" TextColor="Maroon" WidthRequest="150"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
